@@ -1,0 +1,19 @@
+/* Right rotate array by k positions */
+
+void reverse(int a[], int start, int end){
+    while(start<end){
+        int temp = a[start];
+        a[start] = a[end];
+        a[end] = temp;
+        start++;
+        end--;
+    }
+}
+
+void leftArrayRotation(int a[], int size, int k){
+    k = k % size;
+    
+    reverse(a, 0, size - 1);
+    reverse(a, 0, k - 1);
+    reverse(a, k, size - 1);
+}
