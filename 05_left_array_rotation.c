@@ -1,6 +1,6 @@
 /* 5. Left rotate array by k positions */
 
-// Approach name - Three reversal problem
+// Approach name - Three step array reversal algorithm
 
 void reverse(int a[], int start, int end){
     while(start<end){
@@ -19,3 +19,5 @@ void leftArrayRotation(int a[], int size, int k){
     reverse(a, 0, size - k - 1);
     reverse(a, size - k, size - 1);
 }
+
+// There are so many other methods like juggling method, prefix sum method, and temporary array buffer method etc.
