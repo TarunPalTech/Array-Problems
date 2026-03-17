@@ -13,7 +13,7 @@ void reverse(int a[], int start, int end){
 void leftArrayRotation(int a[], int size, int k){
     k = k % size;
     
-    reverse(a, 0, size - 1);
-    reverse(a, 0, k - 1);
-    reverse(a, k, size - 1);
+    reverse(a, 0, k - 1); // Step - 1
+    reverse(a, k, size - 1);  // Step - 2
+    reverse(a, 0, size - 1); // Step - 3
 }
